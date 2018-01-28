@@ -9,9 +9,9 @@ import re
 print('Start Time is: ',datetime.now())
 
 #Enter the path of the input file here.
-input_path = '2student.txt' 
+input_path = 'input_fie_path' 
 #Enter the path of the output file here.
-output_path = 'formatted.txt'
+output_path = 'output_file_path'
 
 with open(input_path,'r') as f :
 	
@@ -34,6 +34,8 @@ with open(output_path,'r+') as foo :
 	foo.seek(0)
 	foo.truncate()
 	temp4 = re.sub('}\n{','},\n{',temp3)
+	foo.write('[\n')
 	foo.write(temp4)
+	foo.write(']')
 
 print('End Time is  : ',datetime.now())
