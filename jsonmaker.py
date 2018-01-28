@@ -6,7 +6,7 @@
 from datetime import datetime
 import re
 
-print(datetime.now())
+print('Start Time is: ',datetime.now())
 
 #Enter the path of the input file here.
 input_path = '2student.txt' 
@@ -36,4 +36,4 @@ with open(output_path,'r+') as foo :
 	temp4 = re.sub('}\n{','},\n{',temp3)
 	foo.write(temp4)
 
-print(datetime.now())
+print('End Time is  : ',datetime.now())
